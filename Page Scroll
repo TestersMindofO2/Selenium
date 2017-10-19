@@ -1,0 +1,14 @@
+How to get the x and y axis of a page and scroll?
+
+public class PageScroll 
+{
+	public void scroll(WebDriver driver,WebElement element)
+	{
+		int x = element.getLocation().getX();
+		int y = element.getLocation().getY();
+		System.out.println(x+"-"+y);
+		JavascriptExecutor j = (JavascriptExecutor)driver;
+		j.executeScript("window.scrollBy("+x+","+y+")");
+	}
+
+}

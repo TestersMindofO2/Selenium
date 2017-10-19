@@ -1,13 +1,5 @@
-# Selenium
-Important codes and concepts related to Selenium using java.
+#Testers Mind Of O2. 
+Welcome to testing family, 'O2' the chemical name of Oxygen. We testres are similar to Oxygen where we save the life of an project.
 
-Context-Click
-
-public static void main(String[] args) throws AWTException, InterruptedException 
-{
-	WebDriver driver = new ChromeDriver();
-	driver.get("...<URL>...");
-	WebElement link = driver.findElement(By.<LocatorName>("<...Value...>"));
-	Actions action = new Actions(driver);
-	action.contextClick(link).perform();
-}
+Testing family has lot of branches within it. I will be using this space to post few codes or topics or challenges i came across.
+Which might help someone who is looking help for the same.

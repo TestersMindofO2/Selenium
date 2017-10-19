@@ -1,0 +1,20 @@
+How to read values from property file?
+1) Create a ".properties" file
+2) Use the following code
+
+public class ReadDataFile 
+{
+	protected Properties prop = null;
+	protected InputStream input = (InputStream) ClassLoader.getSystemResourceAsStream("<File Nmae>");
+	
+	  public void ReadPropertyFile() throws IOException
+	    {
+		    prop = new Properties();
+		    prop.load(input);
+	    }
+
+   public String GetPropVal(String key)
+      {
+	      return prop.getProperty(key);
+      }
+}

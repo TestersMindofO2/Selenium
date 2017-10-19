@@ -1,0 +1,46 @@
+public static void main(String[] args) 
+{ 
+WebDriver driver = new ChromeDriver(); 
+driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS); 
+driver.get("......"); 
+WebElement listbox = driver.findElement(By.id("s")); 
+Select select = new Select(listbox); 
+List alloptions = select.getOptions(); 
+LinkedHashMap<String, Integer> alltext = new LinkedHashMap<String, Integer>(); 
+System.out.println("-----Print all items-------"); 
+for(int i=0;i<alloptions.size();i++) { 
+String text = alloptions.get(i).getText();		
+if(alltext.containsKey(text))
+		{
+			System.out.print("Duplicate key " + text);
+			Integer v = alltext.get(text);
+			v++;
+			alltext.put(text,v);
+		}
+		else
+		{
+			System.out.print("new key " + text);
+			alltext.put(text,1);
+		}
+	}
+	System.out.println("------Print Count for each item------");
+	System.out.println(alltext);
+	
+	
+	System.out.println("----Print without Duplicates-----");
+	Set<String> allkey = alltext.keySet();
+	for(String key:allkey)
+	{
+		System.out.print(key);
+	}
+	
+	System.out.println("-----Print Only Duplicate----");
+	for(String key:allkey)
+	{
+		if(alltext.get(key)>1)
+		{
+			System.out.print(key);
+		}
+		
+	}
+}

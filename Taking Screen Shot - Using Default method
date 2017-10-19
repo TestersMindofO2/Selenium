@@ -1,0 +1,13 @@
+# Using default method TakesScreenshotAs()
+
+public void ScriptForScreenshot(WebDriver driver) throws AWTException, IOException
+	{
+	TakesScreenshot t = (TakesScreenshot) driver;
+	 File srcfile = t.getScreenshotAs(OutputType.FILE);
+	 System.out.println(srcfile);
+	 File destfile = new File("<Location>/ImageNamw.png");
+	 org.apache.commons.io.FileUtils.copyFile(srcfile, destfile);
+	}
+  
+  Note: This defalut method will save the image always in .png format. 
+  And this methos will not capture complete screen.

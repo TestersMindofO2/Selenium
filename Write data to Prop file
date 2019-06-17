@@ -1,0 +1,6 @@
+{
+Properties prop = new Properties();
+OutputStream write =new FileOutputStream("<property file name>");
+prop.setProperty("<Variable name>", "<Value>");
+prop.store(write, "<>")
+}

@@ -1,4 +1,10 @@
-      river.pressKeyCode(93);// Scroll
+      driver.pressKeyCode(93);// Scroll
       driver.pressKeyCode(27);// Camera click action
       TouchAction touchAction = new TouchAction(driver);
-			touchAction.tap(new PointOption().withCoordinates(1650, 566)).perform();// tap on the tick mark in the given co-ordinate.
+	touchAction.tap(new PointOption().withCoordinates(1650, 566)).perform();// tap on the tick mark in the given co-ordinate.
+	
+	import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.offset.PointOption;

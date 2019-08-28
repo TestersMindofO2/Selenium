@@ -1,0 +1,6 @@
+        String pattern = "hh:mm a";  
+			  DateFormat dateFormat = new  SimpleDateFormat(pattern); 
+			  Calendar calToday = Calendar.getInstance();
+			  calToday.add(Calendar.MINUTE,5); 
+			  String min = dateFormat.format(calToday.getTime());
+			  System.out.println(min)

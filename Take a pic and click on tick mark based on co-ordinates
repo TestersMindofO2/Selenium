@@ -1,0 +1,4 @@
+      river.pressKeyCode(93);// Scroll
+      driver.pressKeyCode(27);// Camera click action
+      TouchAction touchAction = new TouchAction(driver);
+			touchAction.tap(new PointOption().withCoordinates(1650, 566)).perform();// tap on the tick mark in the given co-ordinate.

@@ -1,0 +1,3 @@
+String zoomLevelReduced="67%";
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.body.style.zoom='" + zoomLevelReduced +"'");

@@ -7,3 +7,4 @@ Robot robot = new Robot();
 		}
 
 Note: To handle Screen resolution we can use QRes.
+https://sourceforge.net/projects/qres/

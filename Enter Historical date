@@ -1,0 +1,8 @@
+Calendar cal = Calendar.getInstance(); 
+cal.add(Calendar.DATE,10); 
+cal.add(Calendar.MONTH, -2); 
+cal.add(Calendar.YEAR, 0); 
+Date date = cal.getTime();
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY"); 
+String formatDate = sdf.format(date); 
+driver.findElement(By.xpath("<--->")).sendKeys(formatDate);

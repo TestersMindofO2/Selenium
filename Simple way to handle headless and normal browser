@@ -1,0 +1,18 @@
+public void openApplication() throws InterruptedException {
+		try {
+			runHeadless(true);
+		} catch (Exception e) {
+			Reporter.log("Something went wrong, kindlt retry!", true);
+		}
+	}
+	private void runHeadless(boolean headless) {
+		if (headless) {
+			 ChromeOptions chromeOptions = new ChromeOptions();
+       // To run non responsive application in headless browser for windows server, we need to use -gpu and set the resolution
+			 chromeOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
+			 driver = new ChromeDriver(chromeOptions);
+		} else {
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+		}
+	}
